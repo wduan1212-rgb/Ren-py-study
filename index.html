@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ren'Py 视觉小说从零到一教学网页</title>
+  <meta name="description" content="用 AI 和 Ren'Py，从故事构思到打包发布，完成你的第一款互动剧情游戏。">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="返回首页">
+      <img src="assets/img/site-logo.png" alt="Ren'Py 从零到一">
+    </a>
+    <nav class="top-nav" aria-label="主导航">
+      <a href="#roadmap">路线图</a>
+      <a href="#tools">工具准备</a>
+      <a href="#workflow">AI 工作流</a>
+      <a href="#lessons">教学模块</a>
+      <a href="#faq">常见问题</a>
+      <a href="#templates">模板下载</a>
+    </nav>
+    <a class="header-cta" href="#quick-start">开始学习</a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <p class="eyebrow">AI 辅助视觉小说制作实战课</p>
+        <h1>用 AI 和 Ren'Py，从零做出你的第一款视觉小说游戏</h1>
+        <p class="hero-text">从故事设定、角色对白、图片音乐导入，到分支剧情、多结局、报错修复和打包发布，这条路线会带你完整走完一个可复用的创作流程。</p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#quick-start">立即开始教程</a>
+          <a class="secondary-btn" href="#case">查看案例 Demo</a>
+        </div>
+        <div class="hero-stats" aria-label="课程概览">
+          <span><strong>10</strong> 个章节</span>
+          <span><strong>3</strong> 个结局</span>
+          <span><strong>5-10</strong> 分钟 Demo</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img class="desk-scene" src="assets/img/hero-desk-scene.jpg" alt="视觉小说开发桌面预览">
+        <img class="laptop" src="assets/img/mockup-laptop.png" alt="Ren'Py 项目预览">
+        <img class="cat" src="assets/img/mascot-cat-wave.png" alt="">
+      </div>
+    </section>
+
+    <section class="promise-strip" aria-label="你会得到什么">
+      <article>
+        <img src="assets/img/badge-star.png" alt="">
+        <h2>零基础友好</h2>
+        <p>从安装、文件夹、命名规范开始，不默认你懂代码。</p>
+      </article>
+      <article>
+        <img src="assets/img/icon-book.png" alt="">
+        <h2>全流程教学</h2>
+        <p>故事、素材、分支、测试、打包一次走通。</p>
+      </article>
+      <article>
+        <img src="assets/img/icon-puzzle.png" alt="">
+        <h2>可复制模板</h2>
+        <p>脚本、提示词、Bug 表和素材表可以直接套用。</p>
+      </article>
+      <article>
+        <img src="assets/img/icon-shield.png" alt="">
+        <h2>问题解决库</h2>
+        <p>把图片、缩进、跳转、打包等高频坑提前标出来。</p>
+      </article>
+    </section>
+
+    <section id="roadmap" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Roadmap</p>
+        <h2>全流程学习路线图</h2>
+        <p>先跑通主线，再逐步加入素材、变量、声音和发布流程。每一步都只解决一个明确问题。</p>
+      </div>
+      <div class="roadmap">
+        <div class="road-step active"><span>1</span><img src="assets/img/icon-gamepad.png" alt=""><b>工具准备</b><small>安装与环境</small></div>
+        <div class="road-step"><span>2</span><img src="assets/img/character-ella.png" alt=""><b>故事角色</b><small>AI 生成大纲</small></div>
+        <div class="road-step"><span>3</span><img src="assets/img/icon-folder.png" alt=""><b>创建项目</b><small>Ren'Py 结构</small></div>
+        <div class="road-step"><span>4</span><img src="assets/img/tag-plot.png" alt=""><b>主线脚本</b><small>对白与场景</small></div>
+        <div class="road-step"><span>5</span><img src="assets/img/bg-town-sakura.jpg" alt=""><b>素材导入</b><small>图片与音频</small></div>
+        <div class="road-step"><span>6</span><img src="assets/img/tag-branch.png" alt=""><b>支线变量</b><small>分支与结局</small></div>
+        <div class="road-step"><span>7</span><img src="assets/img/icon-shield.png" alt=""><b>测试修复</b><small>排错清单</small></div>
+        <div class="road-step"><span>8</span><img src="assets/img/icon-rocket.png" alt=""><b>打包发布</b><small>分享上线</small></div>
+      </div>
+    </section>
+
+    <section id="tools" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Toolbox</p>
+        <h2>你会用到的工具</h2>
+        <p>网页按照“必装、AI、素材处理、发布”的顺序组织，新手可以先完成最小工具集。</p>
+      </div>
+      <div class="tool-grid">
+        <a class="tool-card" href="https://www.renpy.org/latest.html" target="_blank" rel="noopener noreferrer" aria-label="打开 Ren'Py 官方下载页"><img src="assets/img/logo-renpy.png" alt=""><h3>Ren'Py</h3><p>创建、运行、打包视觉小说项目。</p><span>必装</span><em>打开下载页</em></a>
+        <a class="tool-card" href="https://code.visualstudio.com/download" target="_blank" rel="noopener noreferrer" aria-label="打开 VS Code 官方下载页"><img src="assets/img/logo-vscode.png" alt=""><h3>VS Code</h3><p>编辑 .rpy 文件并查看项目结构。</p><span>必装</span><em>打开下载页</em></a>
+        <a class="tool-card" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer" aria-label="打开 ChatGPT 网页"><img src="assets/img/logo-chatgpt.png" alt=""><h3>GPT</h3><p>课程规划、代码解释、错误分析。</p><span>AI</span><em>打开网页</em></a>
+        <a class="tool-card" href="https://claude.ai/" target="_blank" rel="noopener noreferrer" aria-label="打开 Claude 网页"><img src="assets/img/logo-claude.png" alt=""><h3>Claude</h3><p>长文本剧情、角色关系和分支梳理。</p><span>AI</span><em>打开网页</em></a>
+        <a class="tool-card" href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer" aria-label="打开 Gemini 网页"><img src="assets/img/logo-gemini.png" alt=""><h3>Gemini</h3><p>多模态理解、图片描述和资料整理。</p><span>AI</span><em>打开网页</em></a>
+        <a class="tool-card" href="https://openai.com/codex" target="_blank" rel="noopener noreferrer" aria-label="打开 OpenAI Codex 页面"><img src="assets/img/logo-codex.png" alt=""><h3>Codex</h3><p>批量改代码、重构脚本、协助排错。</p><span>编程</span><em>打开官网</em></a>
+        <article class="tool-card multi-link-card"><img src="assets/img/logo-figma.png" alt=""><h3>Figma / Canva</h3><p>处理封面、按钮、UI 和视觉规范。</p><span>美术</span><div class="tool-links"><a href="https://www.figma.com/" target="_blank" rel="noopener noreferrer">Figma</a><a href="https://www.canva.com/" target="_blank" rel="noopener noreferrer">Canva</a></div></article>
+        <a class="tool-card" href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="打开 GitHub 网页"><img src="assets/img/logo-github.png" alt=""><h3>GitHub</h3><p>项目备份、版本管理和网页部署。</p><span>进阶</span><em>打开网页</em></a>
+        <a class="tool-card" href="https://itch.io/" target="_blank" rel="noopener noreferrer" aria-label="打开 itch.io 网页"><img src="assets/img/logo-itchio.png" alt=""><h3>itch.io</h3><p>发布独立游戏 Demo 和收集反馈。</p><span>发布</span><em>打开网页</em></a>
+      </div>
+    </section>
+
+    <section id="workflow" class="section split-section">
+      <div>
+        <p class="eyebrow">AI Workflow</p>
+        <h2>AI 辅助开发工作流</h2>
+        <p class="lead">不要一次让 AI 写完整大项目。更稳的方式是：先让它帮你拆小任务，每生成一个功能就复制进 Ren'Py 测试一次。</p>
+        <div class="flow-list">
+          <span>提出创意</span>
+          <span>生成世界观</span>
+          <span>输出剧情大纲</span>
+          <span>拆分章节</span>
+          <span>转成 Ren'Py 脚本</span>
+          <span>运行测试</span>
+          <span>带报错回问 AI</span>
+        </div>
+      </div>
+      <aside class="ai-panel">
+        <article><img src="assets/img/logo-chatgpt.png" alt=""><b>GPT</b><p>主策划和导师，适合解释概念、生成模板、定位报错。</p></article>
+        <article><img src="assets/img/logo-claude.png" alt=""><b>Claude</b><p>处理长篇剧情、角色语气和复杂分支一致性。</p></article>
+        <article><img src="assets/img/logo-gemini.png" alt=""><b>Gemini</b><p>辅助理解素材、整理多源资料、描述图片内容。</p></article>
+        <article><img src="assets/img/logo-codex.png" alt=""><b>Codex</b><p>落地文件修改、批量重构脚本、检查跳转和变量。</p></article>
+      </aside>
+    </section>
+
+    <section id="quick-start" class="section build-path">
+      <div class="section-heading">
+        <p class="eyebrow">From Folder To Demo</p>
+        <h2>从项目骨架到可玩 Demo</h2>
+      </div>
+      <div class="build-grid">
+        <article>
+          <span class="num">1</span>
+          <h3>搭建项目框架</h3>
+          <pre><code>my_visual_novel/
+├─ game/
+│  ├─ script.rpy
+│  ├─ images/
+│  │  ├─ bg/
+│  │  └─ characters/
+│  └─ audio/
+└─ README.md</code></pre>
+        </article>
+        <article>
+          <span class="num">2</span>
+          <h3>导入主流程图片</h3>
+          <img class="inline-preview" src="assets/img/bg-town-sakura.jpg" alt="视觉小说背景示例">
+          <ul>
+            <li>背景放入 <code>images/bg/</code></li>
+            <li>立绘放入 <code>images/characters/</code></li>
+            <li>命名使用英文小写和下划线</li>
+          </ul>
+        </article>
+        <article>
+          <span class="num">3</span>
+          <h3>加入分支和变量</h3>
+          <div class="branch-mini" aria-label="分支流程示意">
+            <b>开始剧情</b>
+            <span>相信艾拉</span>
+            <span>保持怀疑</span>
+            <em>根据 trust 进入不同结局</em>
+          </div>
+        </article>
+        <article>
+          <span class="num">4</span>
+          <h3>增加音效、BGM 与细节</h3>
+          <div class="audio-bars">
+            <p><b>bgm_school.ogg</b><span></span></p>
+            <p><b>click.ogg</b><span></span></p>
+            <p><b>choice.ogg</b><span></span></p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="lessons" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Lessons</p>
+        <h2>详细教学模块</h2>
+        <p>每章都包含目标、操作步骤、示例代码、常见错误、AI 提示词和完成检查。</p>
+      </div>
+      <div class="lesson-grid">
+        <article><img src="assets/img/icon-folder.png" alt=""><h3>1 Ren'Py 基础入门</h3><p>界面介绍、文件结构、label、旁白、角色对话。</p><a href="#renpy-code">查看章节</a></article>
+        <article><img src="assets/img/tag-plot.png" alt=""><h3>2 主线剧情脚本</h3><p>把 AI 输出的大纲变成可以从头跑到尾的脚本。</p><a href="#renpy-code">查看代码</a></article>
+        <article><img src="assets/img/icon-book.png" alt=""><h3>3 素材命名与管理</h3><p>背景、立绘、CG、UI、音频的路径和调用方式。</p><a href="#assets">查看规范</a></article>
+        <article><img src="assets/img/tag-branch.png" alt=""><h3>4 分支变量与多结局</h3><p>使用 menu、jump、default、if 搭建互动剧情。</p><a href="#renpy-code">查看模板</a></article>
+        <article><img src="assets/img/dialogue-box.png" alt=""><h3>5 UI 与交互优化</h3><p>标题图、对话框、字体、按钮、选择界面的优化顺序。</p><a href="#case">查看案例</a></article>
+        <article><img src="assets/img/icon-rocket.png" alt=""><h3>6 打包与发布</h3><p>Build Distributions、Web 版本、itch.io 发布和检查清单。</p><a href="#checklist">查看清单</a></article>
+      </div>
+    </section>
+
+    <section id="renpy-code" class="section code-section">
+      <div class="section-heading">
+        <p class="eyebrow">Copy Ready</p>
+        <h2>可复制 Ren'Py 基础脚本</h2>
+      </div>
+      <div class="code-shell">
+        <button class="copy-btn" data-copy-target="main-code">复制代码</button>
+        <pre id="main-code"><code>define a = Character("艾拉", color="#c8ffc8")
+define p = Character("我", color="#c8c8ff")
+
+default trust = 0
+
+label start:
+
+    scene bg room_day
+    with fade
+
+    play music "audio/bgm/daily_loop.ogg" fadein 1.0
+
+    "这是我来到这座城市的第一天。"
+
+    show a normal at center
+
+    a "你终于来了。"
+    p "你认识我？"
+    a "也许吧。现在你必须做一个选择。"
+
+    menu:
+        "你要怎么回答？"
+
+        "相信她":
+            $ trust += 1
+            p "好，我相信你。"
+            jump main_trust
+
+        "保持怀疑":
+            p "我还不能相信你。"
+            jump main_doubt
+
+label main_trust:
+    a "谢谢你。那我们走吧。"
+    jump final_check
+
+label main_doubt:
+    a "谨慎也许是对的。"
+    jump final_check
+
+label final_check:
+    if trust >= 1:
+        jump good_end
+    else:
+        jump normal_end
+
+label good_end:
+    scene bg sunset
+    with fade
+    a "因为你相信了我，所以我们都得救了。"
+    stop music fadeout 1.0
+    "好结局。"
+    return
+
+label normal_end:
+    scene bg night
+    with fade
+    a "也许下一次，你会做出不同的选择。"
+    stop music fadeout 1.0
+    "普通结局。"
+    return</code></pre>
+      </div>
+    </section>
+
+    <section id="assets" class="section asset-section">
+      <div>
+        <p class="eyebrow">Asset Rules</p>
+        <h2>图片和音频导入规范</h2>
+        <p class="lead">新手最容易卡在“图片不显示”。先固定路径、文件名和类型，后面排错会轻松很多。</p>
+        <div class="rule-table">
+          <p><b>背景图</b><span>game/images/bg/bg_classroom_day.png</span></p>
+          <p><b>角色立绘</b><span>game/images/characters/ella_smile.png</span></p>
+          <p><b>BGM</b><span>game/audio/bgm/daily_loop.ogg</span></p>
+          <p><b>音效</b><span>game/audio/sfx/door_open.ogg</span></p>
+        </div>
+      </div>
+      <div class="asset-preview">
+        <img src="assets/img/bg-sky-sakura.jpg" alt="背景图示例">
+        <img src="assets/img/character-ella.png" alt="角色立绘示例">
+        <img src="assets/img/dialogue-box.png" alt="对话框示例">
+      </div>
+    </section>
+
+    <section id="case" class="section case-section">
+      <div class="case-copy">
+        <p class="eyebrow">Case Study</p>
+        <h2>完整案例：《黄昏信笺》</h2>
+        <p>一个 5-8 分钟的治愈悬疑 Demo：玩家作为转学生，在艾拉的引导下寻找一封被藏起的信。两次选择决定真结局、普通结局或坏结局。</p>
+        <div class="case-tags">
+          <span>3 个角色以内</span>
+          <span>5 个场景</span>
+          <span>2 次选择</span>
+          <span>3 个结局</span>
+        </div>
+      </div>
+      <div class="vn-window">
+        <img src="assets/img/bg-town-sakura.jpg" alt="">
+        <img class="ella" src="assets/img/character-ella.png" alt="">
+        <div class="dialogue">
+          <b>艾拉</b>
+          <p>如果你愿意相信我，黄昏前我们还有一次机会。</p>
+          <div class="dialogue-controls"><span>Auto</span><span>Skip</span><span>Log</span><span>Menu</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section faq-section">
+      <div class="section-heading">
+        <p class="eyebrow">FAQ</p>
+        <h2>你可能遇到的麻烦与解决方案</h2>
+      </div>
+      <label class="search-box">
+        <span>搜索问题</span>
+        <input id="faq-search" type="search" placeholder="例如：图片不显示、label、音乐、打包">
+      </label>
+      <div class="faq-list">
+        <details open data-faq="图片不显示 路径 命名 素材"><summary>图片不显示怎么办？</summary><p>检查文件夹、图片名、路径分隔符、大小写和扩展名。第一版建议统一英文小写和下划线。</p></details>
+        <details data-faq="label jump 找不到 标签 跳转"><summary>脚本报错 label not found 怎么办？</summary><p>确认每个 <code>jump good_end</code> 都有对应的 <code>label good_end:</code>，并检查拼写和缩进。</p></details>
+        <details data-faq="中文 字体 乱码 不显示"><summary>中文路径或中文字体失效怎么办？</summary><p>素材文件名优先使用英文；字体需要放进项目并在配置中指定支持中文的字体。</p></details>
+        <details data-faq="音乐 音效 BGM 播放 路径"><summary>音乐无法播放怎么办？</summary><p>检查格式、路径、音量设置和文件名大小写。BGM 建议使用可循环的 ogg 文件。</p></details>
+        <details data-faq="变量 分支 结局 判断"><summary>变量分支突然混乱怎么办？</summary><p>先画分支图，再逐个检查变量增加的位置。可以临时加入旁白输出当前变量值。</p></details>
+        <details data-faq="打包 部署 缺文件 web itch"><summary>打包后运行异常怎么办？</summary><p>确保所有资源都在 game 文件夹内，不引用本机绝对路径，打包后解压本地复测。</p></details>
+      </div>
+    </section>
+
+    <section id="checklist" class="section checklist-section">
+      <div class="section-heading">
+        <p class="eyebrow">Before Build</p>
+        <h2>打包前检查清单</h2>
+      </div>
+      <div class="check-grid">
+        <label><input type="checkbox"> 游戏能正常启动</label>
+        <label><input type="checkbox"> 开场背景能显示</label>
+        <label><input type="checkbox"> 所有角色立绘能显示</label>
+        <label><input type="checkbox"> 所有选项都能点击</label>
+        <label><input type="checkbox"> 所有结局都能触发</label>
+        <label><input type="checkbox"> BGM 和音效正常</label>
+        <label><input type="checkbox"> 没有缺图缺音频报错</label>
+        <label><input type="checkbox"> 打包后本地复测通过</label>
+      </div>
+    </section>
+
+    <section id="templates" class="section templates-section">
+      <div class="section-heading">
+        <p class="eyebrow">Templates</p>
+        <h2>模板与资源</h2>
+        <p>已经按计划书做成可下载文件，适合直接放进你的 Ren'Py 项目资料夹。</p>
+      </div>
+      <div class="template-grid">
+        <a href="assets/templates/story-planning.md" download><img src="assets/img/icon-folder.png" alt=""><b>视觉小说策划表</b><span>下载</span></a>
+        <a href="assets/templates/branch-flow.csv" download><img src="assets/img/tag-branch.png" alt=""><b>分支流程表</b><span>下载</span></a>
+        <a href="assets/templates/bug-tracker.csv" download><img src="assets/img/icon-shield.png" alt=""><b>Bug 记录表</b><span>下载</span></a>
+        <a href="assets/templates/ai-prompts.md" download><img src="assets/img/logo-chatgpt.png" alt=""><b>AI 提示词合集</b><span>下载</span></a>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <img src="assets/img/bg-sky-sakura.jpg" alt="">
+      <div>
+        <h2>现在开始，做出你的第一款视觉小说吧！</h2>
+        <p>从今天的一个故事想法开始，一步一步把它变成可以分享的互动作品。</p>
+        <a class="primary-btn" href="#quick-start">开始搭建</a>
+      </div>
+      <img class="final-cat" src="assets/img/mascot-cat-sit.png" alt="">
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>Ren'Py 从零到一</span>
+    <a href="#top">回到顶部</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
